@@ -5,7 +5,7 @@ export default function Navbar()
       <ul>
         <a href="#home-page"><li>Start</li></a>
         <a href="#react-page"><li>React</li></a>
-        <li>Vanilla</li>
+        <a href="#vanilla-page"><li>Vanilla</li></a>
         <li>Which?</li>
         <li>Final</li>
       </ul>

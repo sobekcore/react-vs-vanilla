@@ -2,6 +2,7 @@
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import ReactPage from "./components/react";
+import VanillaPage from "./components/vanilla";
 import Footer from "./components/footer";
 
 export default function App()
@@ -11,6 +12,7 @@ export default function App()
       <Navbar />
       <Home />
       <ReactPage />
+      <VanillaPage />
       <Footer />
     </>
   );

@@ -1,0 +1,27 @@
+// Navbar Styling
+
+nav
+{
+  position: fixed;
+  right: 15px; bottom: 15px;
+  text-align: right;
+  animation: none;
+  z-index: 2;
+
+  ul
+  {
+    list-style: none;
+    font: 24px "Open Sans";
+    color: $main-gray-color;
+
+    li
+    {
+      padding: 15px;
+      transition: .15s ease-in-out;
+      transform-origin: right;
+    }
+
+    li:hover { color: black; transform: scale(1.2); }
+    a { color: $main-gray-color; text-decoration: none; }
+  }
+}
