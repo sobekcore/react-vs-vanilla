@@ -17,6 +17,7 @@ html {
 body {
   overflow-x: hidden;
   background-color: beige;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAAOsAAADrASts18IAAAKJSURBVFhHvZdbiE1RGIC3ezJyedFEHkwiRUkpl3lQSvIyibxPeJGIBw+TeNFM8aJIHiWSy4u8iQiPlJJMcilmyqXcR+6+b7VXTjP7mH32OXt/9XXOv84+e629zr/+tc64JEmu424cg4/wO1bKA/yT+h6P4gKsjJ1o5x/wa/r+N17FLnSWSmUafsLPOB8P4kuMs/IMd+F0LI3jaGd7QpQk43EzOgvOhp8N4Ulchi1nMdpJP5qMtSxCO/YnirNyBx3gJGwZ19Cbrw/RSKagP8VDjAN5g304D5tmI3rTKyH6P2vxPH5Dv/MzjW0fi4WYgAP4CztsyMEcdAYGMc6KM7QdTe6G6UFvciRE+XHw5sRtjANxVZk7SzE3s9BpfYuTbSiACW3HHzEOxtXkACfiqJxGv7Q1RMWZgfvQlRUH8iJta8e6rEAvvhei1rAGL+IP9N6+XsLlmMld9MKVIWoen3gTXsA4G/oaM+lGLzgTosawkFm8XAmn8AnWdqqW+nPYNbzqRUxAL2rDufgK62FiOZWrcDU6azMxYil3abpCrKC+PsdROYyOdn+IsvEBardzdc+4iYdwAxbexCyvFiUz180pi4Vopz7RXjSBcy21vFxGO3ANZ+FS9fPeEJXAOrSDGyEaiUnm5051KbixPEYTycwezlN0IypU9/PigdWnPBGif7gR2X4/RCViSf2C1vapNqRsQQdwLEQFybN3v0P3Bzu3QEU601fXdeksQZ/W/w2xeDn1ts0OUQVYXOzQlWGls0aYhE3RyPHJk7PsQAuO371lQ1V46vHo5bI7i87GNqyUA2jHUUtxpZhw/nm1c3fIertpbho9Qntq9iQjbq0OpHI85ZoL/o9okiT5Cy24qGoJI11cAAAAAElFTkSuQmCC"), auto;
 }
 
 body::-webkit-scrollbar {
@@ -42,35 +43,48 @@ nav {
 nav ul {
   list-style: none;
   font: 24px "Open Sans";
-  color: #282828;
-}
-nav ul li {
-  padding: 15px;
-  transition: 0.15s ease-in-out;
-  transform-origin: right;
-}
-nav ul li:hover {
-  color: black;
-  transform: scale(1.2);
 }
 nav ul a {
   color: #282828;
   text-decoration: none;
 }
+nav ul a li {
+  padding: 15px;
+  transition: 0.15s ease-in-out;
+  transform-origin: right;
+}
+nav ul a li:hover {
+  transform: scale(1.2);
+}
+nav ul a:hover {
+  color: black;
+}
+nav ul a.current {
+  color: #fcb82b;
+}
+@media (max-width: 649px) {
+  nav {
+    display: none;
+  }
+}
 
 header {
-  width: 100vw;
-  animation: launch 3s;
+  width: 100%;
+  height: 100vh;
+  animation: launch 2.6s;
   animation-fill-mode: forwards;
-  animation-delay: 1900ms;
+  animation-delay: 1000ms;
   background: linear-gradient(to top right, #61DBFB 0%, #61DBFB 50%, beige 50%, beige 100%);
+  background-size: 100vw 0px;
+  background-repeat: no-repeat;
+  background-color: #61DBFB;
 }
 @keyframes launch {
   from {
-    height: 1px;
+    background-size: 100vw 0px;
   }
   to {
-    height: 100vh;
+    background-size: 100vw 100vh;
   }
 }
 header #react-img {
@@ -82,6 +96,7 @@ header #react-img {
   transform: translate(-50%, -50%);
   user-select: none;
   animation: spin 18s infinite;
+  overflow: hidden;
 }
 @keyframes spin {
   from {
@@ -106,6 +121,14 @@ header h1 {
   user-select: none;
   z-index: 1;
   opacity: 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 header span {
   font-size: 48px;
@@ -134,38 +157,22 @@ header #vanilla-js {
 #react-page {
   position: relative;
   background-color: #61DBFB;
-  width: 100vw;
+  width: 100%;
   min-height: 950px;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#react-page #wrapper {
+  margin: 0 30px;
 }
-#react-page p {
+#react-page #wrapper p {
   font: bold 44px "Open Sans";
   color: #4396AA;
+  padding: 45px 65px 65px 65px;
   text-align: center;
-  padding-top: 40px;
-  animation: fadeIn 2.5s;
-  animation-fill-mode: forwards;
-  animation-delay: 300ms;
   user-select: none;
-  opacity: 0;
 }
-#react-page p img {
+#react-page #wrapper p img {
   width: 100px;
   transform: translate(20%, 33%);
-}
-#react-page #wrapper {
-  margin: 65px 30px 0 30px;
-  animation: fadeIn 2.5s;
-  animation-fill-mode: forwards;
-  animation-delay: 300ms;
-  opacity: 0;
 }
 #react-page #wrapper section {
   display: grid;
@@ -206,37 +213,28 @@ header #vanilla-js {
 
 #transition {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 #vanilla-page {
   position: relative;
   background-color: beige;
-  width: 100vw;
+  width: 100%;
   min-height: 950px;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#vanilla-page #wrapper {
+  margin: 65px 30px 0 30px;
 }
-#vanilla-page p {
+#vanilla-page #wrapper p {
   font: bold 44px "Open Sans";
   color: #ADA480;
   text-align: center;
   user-select: none;
-  opacity: 0;
+  margin: 65px;
 }
-#vanilla-page p img {
+#vanilla-page #wrapper p img {
   height: 130px;
   transform: translate(30%, 33%);
-}
-#vanilla-page #wrapper {
-  margin: 65px 30px 0 30px;
-  opacity: 0;
 }
 #vanilla-page #wrapper section {
   display: grid;
@@ -275,15 +273,72 @@ header #vanilla-js {
   filter: contrast(1);
 }
 
+#which-page {
+  padding-top: 40px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+#which-page section {
+  width: 100%;
+}
+#which-page section h1, #which-page section p {
+  background-color: #61DBFB;
+  border-radius: 15px;
+  margin: 40px 60px;
+  padding: 40px;
+}
+#which-page section p {
+  font: 24px "Open Sans";
+}
+#which-page section #title {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+}
+#which-page section #title h1 {
+  letter-spacing: 2px;
+  font: bold 40px "Open Sans";
+}
+#which-page section #title img {
+  height: 170px;
+  margin: auto 40% auto auto;
+}
+@media (max-width: 549px) {
+  #which-page section h1, #which-page section p {
+    margin: 20px 30px;
+  }
+}
+@media (max-width: 749px) {
+  #which-page section {
+    width: 100vw;
+  }
+  #which-page section #title {
+    grid-template-columns: 1fr;
+  }
+  #which-page img {
+    display: none;
+  }
+}
+
+#dots {
+  position: relative;
+  width: 100%;
+  margin-bottom: -5px;
+  background: linear-gradient(to bottom, transparent 0%, #61DBFB 100%);
+  transform: scaleX(-1);
+  user-select: none;
+  z-index: -1;
+}
+
 footer {
   height: 120px;
-  width: 100vw;
+  width: 100%;
   background-color: #61DBFB;
   transform-origin: center;
   font: 22px "Open Sans";
   color: #282828;
   padding-top: 29px;
   text-align: center;
+  z-index: 1;
 }
 footer a {
   font-weight: 600;

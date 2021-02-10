@@ -1,0 +1,56 @@
+#which-page
+{
+  padding-top: 40px;
+  margin-bottom: 200px;
+  text-align: center;
+
+  section
+  {
+    width: 100%;
+
+    h1, p
+    {
+      background-color: $react-color;
+      border-radius: 15px;
+      margin: 40px 60px; padding: 40px;
+    }
+
+    p { font: 24px "Open Sans"; }
+
+    #title
+    {
+      display: grid;
+      grid-template-columns: 8fr 2fr;
+
+      h1
+      {
+        letter-spacing: 2px;
+        font: bold 40px "Open Sans";
+      }
+
+      img { height: 170px; margin: auto 40% auto auto; }
+    }
+
+    @media(max-width: 549px)
+    { h1, p { margin: 20px 30px; } }
+  }
+
+  @media(max-width: 749px)
+  {
+    section { width: 100vw;
+    #title { grid-template-columns: 1fr; } }
+
+    img { display: none; }
+  }
+}
+
+#dots
+{
+  position: relative;
+  width: 100%;
+  margin-bottom: -5px;
+  background: linear-gradient(to bottom, transparent 0%, $react-color 100%);
+  transform: scaleX(-1);
+  user-select: none;
+  z-index: -1;
+}

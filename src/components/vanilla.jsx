@@ -5,8 +5,8 @@ export default function VanillaPage()
   return(
     <article id="vanilla-page">
       <Fade delay={200} duration={1700} left>
-        <p>Vanilla<img src="vanilla.svg"/></p>
         <div id="wrapper">
+          <p>Vanilla<img src="vanilla.svg"/></p>
           <section>
             <div><img src="./features/vanilla/library.png"/>
               Multiple of built in libraries which can be used to do anything.</div>

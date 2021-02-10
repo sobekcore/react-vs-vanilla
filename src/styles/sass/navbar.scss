@@ -12,16 +12,26 @@ nav
   {
     list-style: none;
     font: 24px "Open Sans";
-    color: $main-gray-color;
 
-    li
+    a
     {
-      padding: 15px;
-      transition: .15s ease-in-out;
-      transform-origin: right;
+      color: $main-gray-color;
+      text-decoration: none;
+
+      li
+      {
+        padding: 15px;
+        transition: .15s ease-in-out;
+        transform-origin: right;
+      }
+
+      li:hover { transform: scale(1.2); }
     }
 
-    li:hover { color: black; transform: scale(1.2); }
-    a { color: $main-gray-color; text-decoration: none; }
+    a:hover { color: black; }
+    a.current { color: #fcb82b; }
   }
+
+  @media(max-width: 649px)
+  { display: none; }
 }

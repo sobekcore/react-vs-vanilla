@@ -4,34 +4,23 @@
 {
   position: relative;
   background-color: $react-color;
-  width: 100vw;
+  width: 100%;
   min-height: 950px;
-
-  @keyframes fadeIn
-  { from { opacity: 0; } to { opacity: 1; } }
-
-  p
-  {
-    font: bold 44px "Open Sans";
-    color: $darker-react-color;
-    text-align: center;
-    padding-top: 40px;
-    animation: fadeIn 2.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 300ms;
-    user-select: none;
-    opacity: 0;
-
-    img { width: 100px; transform: translate(20%, 33%); }
-  }
 
   #wrapper
   {
-    margin: 65px 30px 0 30px;
-    animation: fadeIn 2.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 300ms;
-    opacity: 0;
+    p
+    {
+      font: bold 44px "Open Sans";
+      color: $darker-react-color;
+      padding: 45px 65px 65px 65px;
+      text-align: center;
+      user-select: none;
+
+      img { width: 100px; transform: translate(20%, 33%); }
+    }
+
+    margin: 0 30px;
 
     section
     {
@@ -70,4 +59,4 @@
   }
 }
 
-#transition { position: relative; width: 100vw; }
+#transition { position: relative; width: 100%; }

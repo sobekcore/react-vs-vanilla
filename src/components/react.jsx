@@ -6,8 +6,8 @@ export default function ReactPage()
     <>
       <article id="react-page">
         <Fade duration={1700} left>
-          <p>React<img src="react-border.svg"/></p>
           <div id="wrapper">
+            <p>React<img src="react-border.svg"/></p>
             <section>
               <div><img src="./features/react/open-source.png"/>
                 React is an open-source JavaScript library under MIT license.</div>

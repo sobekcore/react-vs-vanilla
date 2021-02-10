@@ -2,13 +2,14 @@
 
 footer
 {
-  height: 120px; width: 100vw;
+  height: 120px; width: 100%;
   background-color: $react-color;
   transform-origin: center;
   font: 22px "Open Sans";
   color: $main-gray-color;
   padding-top: 29px;
   text-align: center;
+  z-index: 1;
 
   a
   {

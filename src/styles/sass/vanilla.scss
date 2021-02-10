@@ -4,27 +4,23 @@
 {
   position: relative;
   background-color: beige;
-  width: 100vw;
+  width: 100%;
   min-height: 950px;
-
-  @keyframes fadeIn
-  { from { opacity: 0; } to { opacity: 1; } }
-
-  p
-  {
-    font: bold 44px "Open Sans";
-    color: $darker-vanilla-color;
-    text-align: center;
-    user-select: none;
-    opacity: 0;
-
-    img { height: 130px; transform: translate(30%, 33%); }
-  }
 
   #wrapper
   {
+    p
+    {
+      font: bold 44px "Open Sans";
+      color: $darker-vanilla-color;
+      text-align: center;
+      user-select: none;
+      margin: 65px;
+
+      img { height: 130px; transform: translate(30%, 33%); }
+    }
+
     margin: 65px 30px 0 30px;
-    opacity: 0;
 
     section
     {
