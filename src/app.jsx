@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 export default function App()
 {
   return(
-    <>
+    <div id="app">
       <Navbar />
       <Home />
       <ReactPage />
@@ -18,6 +18,6 @@ export default function App()
       <WhichPage />
       <FinalPage />
       <Footer />
-    </>
+    </div>
   );
 }
