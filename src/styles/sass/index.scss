@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb
 ::selection
 { color: $react-color; background: $darker-react-color; }
 
-#app { overflow-x: hidden; }
+#app { overflow-x: hidden; width: 100%; }
 
 // Importing Sass Components
 @import "navbar.scss";
