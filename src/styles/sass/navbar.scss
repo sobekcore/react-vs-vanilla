@@ -33,5 +33,5 @@ nav
   }
 
   @media(max-width: 649px)
-  { display: none; }
+  { ul a { display: none; } }
 }

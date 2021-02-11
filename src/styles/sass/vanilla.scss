@@ -18,6 +18,12 @@
       margin: 65px;
 
       img { height: 130px; transform: translate(30%, 33%); }
+
+      @media(max-width: 449px)
+      { img { height: 100px; } }
+
+      @media(max-width: 370px)
+      { img { transform: translate(0%, 0%); padding-top: 10px; } }
     }
 
     margin: 65px 30px 0 30px;
@@ -55,6 +61,9 @@
 
       div:hover { color: black; transform: scale(1.1); }
       div:hover > img { filter: contrast(1); }
+
+      @media(max-width: 449px)
+      { div { padding: 10px; font-size: 16px; } }
     }
   }
 }

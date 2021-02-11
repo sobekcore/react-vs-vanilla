@@ -18,6 +18,12 @@
       user-select: none;
 
       img { width: 100px; transform: translate(20%, 33%); }
+
+      @media(max-width: 449px)
+      { img { width: 60px; } }
+
+      @media(max-width: 362px)
+      { img { transform: translate(0%, 0%); } }
     }
 
     margin: 0 30px;
@@ -55,8 +61,11 @@
 
       div:hover { color: black; transform: scale(1.1); }
       div:hover > img { filter: contrast(1); }
+
+      @media(max-width: 449px)
+      { div { padding: 10px; font-size: 16px; } }
     }
   }
 }
 
-#transition { position: relative; width: 100%; }
+#transition { position: relative; width: 100%; user-select: none; }

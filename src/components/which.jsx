@@ -11,18 +11,18 @@ export default function WhichPage()
             <Fade delay={1800} duration={1700} right>
               <img src="./emoji.png"/>
             </Fade></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices, enim vel porttitor maximus, enim libero
-            efficitur ipsum, ac gravida dui nisi non libero. Proin nec lacus non tellus viverra elementum sed id erat.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer consequat justo
-            arcu, id faucibus ante auctor sit amet. Vestibulum tincidunt viverra metus eget rutrum. Morbi semper sem maximus,
-            vehicula dolor mattis, cursus massa. Sed non rhoncus neque. Curabitur laoreet vel eros vitae semper. Vestibulum
-            pretium mauris luctus ex facilisis, eu tempus sapien accumsan. Mauris id auctor justo. Suspendisse in puru
-            faucibus, dignissim nisl at, blandit nibh. Integer iaculis est at auctor vehicula. Nam aliquet blandit ex sit
-            amet venenatis. Phasellus metus diam, iaculis sed mi sodales, euismod rhoncus diam.</p>
+            <p>Which one to choose would be a great question. And the anwser is: it depends, as always. If you'd like to use
+            the most lightweight and the most flexible tool, you probably would want to use Vanilla JavaScript. However
+            Vanilla JS has it inconveniences, like naming and scaling convenction, as well as complexity. Sometimes the names
+            of variables can go really long in JavaScirpt, like prototype.constuctor.world.player.controler... etc. It's
+            sometimes really hard to track on. In React a lot of stuff is getting easier and more flexibile (sometimes).
+            You have in-built component based system, where in Vanilla you'd have to build yourself one. I think that the one
+            to choose will depend on your needs, both are good, and both have its usses. But most of the time either React or
+            Vanilla JS would be a good choice.</p>
           </section>
         </Fade>
       </article>
-      <img id="dots" src="./dots.svg"/>
+      <img id="waves" src="./waves.svg"/>
     </>
   );
 }

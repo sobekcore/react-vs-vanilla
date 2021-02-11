@@ -4,6 +4,7 @@ import Home from "./components/home";
 import ReactPage from "./components/react";
 import VanillaPage from "./components/vanilla";
 import WhichPage from "./components/which";
+import FinalPage from "./components/final";
 import Footer from "./components/footer";
 
 export default function App()
@@ -15,6 +16,7 @@ export default function App()
       <ReactPage />
       <VanillaPage />
       <WhichPage />
+      <FinalPage />
       <Footer />
     </>
   );

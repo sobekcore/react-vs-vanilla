@@ -1,8 +1,8 @@
 #which-page
 {
   padding-top: 40px;
-  margin-bottom: 200px;
   text-align: center;
+  color: $main-gray-color;
 
   section
   {
@@ -15,7 +15,7 @@
       margin: 40px 60px; padding: 40px;
     }
 
-    p { font: 24px "Open Sans"; }
+    p { font: 24px "Open Sans"; word-break: break-all; }
 
     #title
     {
@@ -28,29 +28,37 @@
         font: bold 40px "Open Sans";
       }
 
-      img { height: 170px; margin: auto 40% auto auto; }
+      img { width: 170px; margin: auto 40% auto auto; }
     }
 
     @media(max-width: 549px)
-    { h1, p { margin: 20px 30px; } }
+    {
+      #title h1 { margin: 20px 30px; font-size: 28px; }
+      p { margin: 20px 30px; font-size: 18px; }
+    }
   }
 
   @media(max-width: 749px)
   {
-    section { width: 100vw;
-    #title { grid-template-columns: 1fr; } }
-
-    img { display: none; }
+    section { #title { grid-template-columns: 1fr; }
+    img { display: none; } }
   }
 }
 
-#dots
+#waves
 {
+  width: 30%;
   position: relative;
-  width: 100%;
-  margin-bottom: -5px;
-  background: linear-gradient(to bottom, transparent 0%, $react-color 100%);
-  transform: scaleX(-1);
+  transform: rotateZ(-20deg) translateX(-100%);
+  margin-top: -10%; left: 100%;
   user-select: none;
+  overflow: hidden;
   z-index: -1;
+
+  @media(max-width: 749px)
+  {
+    width: 50%; left: 50%;
+    transform: rotateZ(0deg) translateX(-50%);
+    margin-top: 0; margin-bottom: -45px;
+  }
 }

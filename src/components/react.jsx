@@ -5,7 +5,7 @@ export default function ReactPage()
   return(
     <>
       <article id="react-page">
-        <Fade duration={1700} left>
+        <Fade delay={200} duration={1700} left>
           <div id="wrapper">
             <p>React<img src="react-border.svg"/></p>
             <section>
